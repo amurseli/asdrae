@@ -178,7 +178,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6f4961963062c441921cb83dc898985, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_JumpForce: 400
+  m_JumpForce: 800
   m_CrouchSpeed: 0.36
   m_MovementSmoothing: 0.05
   m_AirControl: 1
@@ -253,7 +253,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 125737968}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.12, y: -1.38, z: 0}
+  m_LocalPosition: {x: 1.01, y: -2.11, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1327572059}
@@ -274,9 +274,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.19, y: -0.39}
+  m_Offset: {x: -0.20144176, y: -0.39}
   serializedVersion: 2
-  m_Radius: 1.21
+  m_Radius: 1.1985583
 --- !u!61 &125737974
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -328,6 +328,7 @@ GameObject:
   - component: {fileID: 519420032}
   - component: {fileID: 519420031}
   - component: {fileID: 519420029}
+  - component: {fileID: 519420030}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -343,6 +344,19 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_Enabled: 1
+--- !u!114 &519420030
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42c1fdfb8e6665c4e8a2820485d98c71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 125737972}
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
@@ -904,12 +918,20 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6782459457865197748, guid: 01fd49f1e8a36f3479c651cc8f145718, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3.3977954
+      objectReference: {fileID: 0}
+    - target: {fileID: 6782459457865197748, guid: 01fd49f1e8a36f3479c651cc8f145718, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.2352273
+      objectReference: {fileID: 0}
+    - target: {fileID: 6782459457865197748, guid: 01fd49f1e8a36f3479c651cc8f145718, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -8
+      value: -61.1008
       objectReference: {fileID: 0}
     - target: {fileID: 6782459457865197748, guid: 01fd49f1e8a36f3479c651cc8f145718, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.72
+      value: -1.8467
       objectReference: {fileID: 0}
     - target: {fileID: 6782459457865197748, guid: 01fd49f1e8a36f3479c651cc8f145718, type: 3}
       propertyPath: m_LocalPosition.z
