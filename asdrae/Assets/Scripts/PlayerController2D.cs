@@ -30,6 +30,8 @@ public class PlayerController2D : MonoBehaviour
 	public BoolEvent OnCrouchEvent;
 	private bool m_wasCrouching = false;
 
+	private bool canDoubleJump = false;
+
 	private void Awake()
 	{
 		m_Rigidbody2D = GetComponent<Rigidbody2D>();
@@ -128,17 +130,32 @@ public class PlayerController2D : MonoBehaviour
 		if (jump)
 		{	
 			// Add a vertical force to the player.
-			m_Grounded = false;
-			if (i<2)
+			
+
+			if (m_Grounded)
 			{
-				if(i == 1)
-				{
-					Debug.Log(i);
-				 	m_Rigidbody2D.AddForce(new Vector2(0f, -m_JumpForce));
-				 	m_Rigidbody2D.AddForce(new Vector2(0f, m_JumpForce));
-				}
 				m_Rigidbody2D.AddForce(new Vector2(0f, m_JumpForce));
+				canDoubleJump = true;
+				m_Grounded = false;
 			}
+
+			if(canDoubleJump && i== 1)
+			{
+				m_Rigidbody2D.velocity = Vector2.zero;
+				m_Rigidbody2D.AddForce(new Vector2(0f, m_JumpForce));
+				canDoubleJump = false;
+			}
+
+			// if (i<2)
+			// {
+			// 	if(i == 1)
+			// 	{
+			// 		Debug.Log(i);
+			// 	 	m_Rigidbody2D.velocity = Vector2.zero;
+			// 	 	m_Rigidbody2D.AddForce(new Vector2(0f, 1));
+			// 	}
+			// 	m_Rigidbody2D.AddForce(new Vector2(0f, m_JumpForce));
+			// }
 		}
 	}
 
