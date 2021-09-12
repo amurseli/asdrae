@@ -64,7 +64,7 @@ public class PlayerController2D : MonoBehaviour
 	}
 
 
-	public void Move(float move, bool crouch, bool jump, int i)
+	public void Move(float move, bool crouch, bool jump, int j)
 	{
 		// If crouching, check to see if the character can stand up
 		if (!crouch)
@@ -139,7 +139,7 @@ public class PlayerController2D : MonoBehaviour
 				m_Grounded = false;
 			}
 
-			if(canDoubleJump && i== 1)
+			if(canDoubleJump && j== 1)
 			{
 				m_Rigidbody2D.velocity = Vector2.zero;
 				m_Rigidbody2D.AddForce(new Vector2(0f, m_JumpForce));
