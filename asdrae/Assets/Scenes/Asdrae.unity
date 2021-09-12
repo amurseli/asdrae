@@ -138,10 +138,10 @@ GameObject:
   m_Component:
   - component: {fileID: 125737972}
   - component: {fileID: 125737971}
-  - component: {fileID: 125737970}
   - component: {fileID: 125737969}
   - component: {fileID: 125737974}
   - component: {fileID: 125737973}
+  - component: {fileID: 125737970}
   - component: {fileID: 125737975}
   m_Layer: 0
   m_Name: Player
@@ -184,19 +184,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_JumpForce: 800
-  m_CrouchSpeed: 0.36
   m_MovementSmoothing: 0.05
   m_AirControl: 1
   m_WhatIsGround:
     serializedVersion: 2
     m_Bits: 4294967295
   m_GroundCheck: {fileID: 2020285362}
-  m_CeilingCheck: {fileID: 1327572059}
-  m_CrouchDisableCollider: {fileID: 0}
   OnLandEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  OnCrouchEvent:
     m_PersistentCalls:
       m_Calls: []
 --- !u!212 &125737971
@@ -258,7 +252,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 125737968}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -42.3, y: 11.64, z: 0}
+  m_LocalPosition: {x: 2.6, y: 2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1327572059}
@@ -321,7 +315,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 125737970}
-  runSpeed: 100
+  runSpeed: 50
 --- !u!1001 &247154722
 PrefabInstance:
   m_ObjectHideFlags: 0
