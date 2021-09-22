@@ -20,18 +20,19 @@ public class PlayerMovement : MonoBehaviour
         horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
         verticalMove = Input.GetAxisRaw("Vertical") * verticalSpeed;
 
-        if(Input.GetButtonDown("Jump"))
-        {
-            jump = true;
-            if(Input.GetButtonDown("Jump"))
-            {
-                j ++;
-            }
-        }
+        // if(Input.GetButtonDown("Jump"))
+        // {
+        //     jump = true;
+        //     if(Input.GetButtonDown("Jump"))
+        //     {
+        //         j ++;
+        //     }
+        // }
     }
     void FixedUpdate()
     {
+        
         controller.Move(horizontalMove * Time.fixedDeltaTime, verticalMove*Time.fixedDeltaTime, jump,j);
-        jump = false;
+        // jump = false;
     }
 }
